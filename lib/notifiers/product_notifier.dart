@@ -23,6 +23,7 @@ class ProductNotifier extends ChangeNotifier {
   }
 
   void setSize(int value) {
+    _oldColor = _color;
     _size = value;
     notifyListeners();
   }

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:product_card_challenge/notifiers/product_notifier.dart';
 import 'package:product_card_challenge/widgets/product_details_container.dart';
@@ -42,7 +44,7 @@ class _ProductCardState extends State<ProductCard>
 
   @override
   Widget build(BuildContext context) {
-    // log('Size: $size');
+    log('Pixel Ration: ${MediaQuery.of(context).devicePixelRatio}');
     final size = MediaQuery.of(context).size;
 
     return Consumer<ProductNotifier>(builder: (context, notifier, child) {
